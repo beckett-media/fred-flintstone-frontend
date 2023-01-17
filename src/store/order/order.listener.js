@@ -16,12 +16,12 @@ listenerMiddleware.startListening({
     fetch(`https://jsonplaceholder.typicode.com/todos/${action.payload}`)
       .then((response) => response.json())
       .then((json) => {
-        dispatch(setCurrentOrder(json));
-        dispatch(toggleIsFetching());
+        // dispatch(setCurrentOrder(json));
+        // dispatch(toggleIsFetching());
       })
       .catch((error) => {
-        dispatch(orderFetchError(error));
-        dispatch(toggleIsFetching());
+        // dispatch(orderFetchError(error));
+        // dispatch(toggleIsFetching());
       });
   },
 });

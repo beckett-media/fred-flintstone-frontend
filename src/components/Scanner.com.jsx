@@ -51,7 +51,7 @@ const Scanner = () => {
   // }, []);
 
   useEffect(() => {
-    dispatch(fetchOrder(1));
+    // dispatch(fetchOrder(1));
   });
 
   useEffect(() => {
