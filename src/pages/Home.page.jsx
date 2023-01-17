@@ -34,7 +34,7 @@ const Home = () => {
         });
       }
     };
-    fetchOrderDetails();
+    // fetchOrderDetails();
   }, []);
 
   return (

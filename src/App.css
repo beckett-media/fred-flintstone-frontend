@@ -1,28 +1,26 @@
-.app{
-  padding: 0 40px;
-}
-
 .main {
   min-height: 50vh;
+  padding: 40px 40px;
 }
 
-.footer{
+.footer {
   text-align: center;
 }
 
 .menuBar {
+  padding: 0 40px;
   height: 64px;
   border-bottom: solid 1px #e8e8e8;
   overflow: auto;
   box-shadow: 0 0 30px #f3f1f1;
   display: flex;
-  justify-content: center;
-  align-items: center ;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
+  float: left;
   width: 500px;
-  /* float: left; */
 }
 
 .logo a {
@@ -35,6 +33,18 @@
 .menuCon {
   width: calc(100% - 150px);
   float: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuCon .leftMenu {
+  width: 50%;
+  float: left;
+}
+
+.menuCon .rightMenu {
+  float: right;
 }
 
 .menuCon .ant-menu-item {
@@ -53,7 +63,6 @@
 .menuCon .ant-menu-horizontal {
   border-bottom: none;
 }
-
 
 .menuCon .rightMenu {
   float: right;
@@ -96,12 +105,12 @@
   padding: 0;
 }
 
-.barsMenu>span {
+.barsMenu > span {
   display: block;
 }
 
-.ant-drawer-body .ant-menu-horizontal>.ant-menu-item,
-.ant-drawer-body .ant-menu-horizontal>.ant-menu-submenu {
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item,
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-submenu {
   display: inline-block;
   /* width: 100%; */
 }
@@ -110,11 +119,24 @@
   border-bottom: none;
 }
 
-.ant-drawer-body .ant-menu-horizontal>.ant-menu-item:hover {
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item:hover {
   border-bottom-color: transparent;
 }
 
 @media (max-width: 767px) {
+  .menuBar {
+    padding: 0 20px;
+  }
+
+  .main {
+    padding: 20px 20px;
+  }
+
+  .menuCon {
+    justify-content: end;
+    margin-bottom: 10px;
+  }
+
   .barsMenu {
     display: inline-block;
   }
@@ -131,6 +153,7 @@
 
   .logo a {
     margin-left: -20px;
+    font-size: 15px;
   }
 
   .menuCon .ant-menu-item,

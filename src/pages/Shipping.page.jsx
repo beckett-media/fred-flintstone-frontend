@@ -7,7 +7,7 @@ const Shipping = () => {
 
   useEffect(() => {
     //dispath action to get order with id 1
-    dispatch(fetchOrder(1));
+    // dispatch(fetchOrder(1));
   }, []);
   
   return <div></div>;

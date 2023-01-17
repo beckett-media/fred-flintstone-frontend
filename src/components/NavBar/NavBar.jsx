@@ -1,6 +1,7 @@
 import React from 'react';
 import LeftMenu from './LeftMenu';
 import { Drawer, Button } from 'antd';
+import RightMenu from './RightMenu';
 
 const NavBar = () => {
   const [visible, setVisible] = React.useState(false);
@@ -16,9 +17,12 @@ const NavBar = () => {
         <a href="">Beckett Shipping and Receiving</a>
       </div>
       <div className="menuCon">
-        <div className="leftMenu">
-          <LeftMenu drawerOpened={visible} />
-        </div>
+          <div className="leftMenu">
+            <LeftMenu drawerOpened={visible} />
+          </div>
+          <div className="rightMenu">
+            <RightMenu drawerOpened={visible} />
+          </div>
 
         <Button className="barsMenu" type="primary" onClick={showDrawer}>
           <span className="barsBtn"></span>
@@ -32,6 +36,7 @@ const NavBar = () => {
           open={visible}
         >
           <LeftMenu drawerOpened={visible} />
+          <RightMenu />
         </Drawer>
       </div>
     </nav>
