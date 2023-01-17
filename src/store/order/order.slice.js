@@ -6,11 +6,12 @@ const initialState = {
   isFetching: false,
 };
 
-const formSlice = createSlice({
+const orderSlice = createSlice({
   name: 'order',
   initialState,
   reducers: {
     setCurrentOrder(state, action) {
+      state.isFetching = false;
       state.currentOrder = action.payload;
     },
     orderFetchError(state, action) {
@@ -34,6 +35,6 @@ export const {
   isFetching,
   toggleIsFetching,
   fetchOrder,
-} = formSlice.actions;
+} = orderSlice.actions;
 
-export default formSlice.reducer;
+export default orderSlice.reducer;
