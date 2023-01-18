@@ -2,12 +2,13 @@ import { Form, Input, Button } from 'antd';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { selectCurrentUser } from '../store/auth/auth.selector';
+import { selectCurrentUser, selectIsUserFetching } from '../store/auth/auth.selector';
 import { loginUser } from '../store/auth/auth.slice';
 
 function LoginComponent() {
   const dispatch = useDispatch();
   const user = useSelector(selectCurrentUser);
+  const loading = useSelector(selectIsUserFetching);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -21,7 +22,6 @@ function LoginComponent() {
   };
 
   const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
   };
 
   useEffect(() => {
@@ -54,7 +54,7 @@ function LoginComponent() {
       </Form.Item>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit">
+        <Button loading={loading} type="primary" htmlType="submit">
           Log In
         </Button>
       </Form.Item>

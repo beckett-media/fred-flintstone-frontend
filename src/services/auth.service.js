@@ -10,8 +10,23 @@ async function loginUser(payload) {
   }
 }
 
+async function signOutUser() {
+  try {
+    let refreshToken = localStorage.getItem('refreshToken');
+    refreshToken = JSON.parse(refreshToken);
+    const payload = {
+      refreshToken: refreshToken.token,
+    };
+    const { data } = await axios.post(API_URL + '/auth/logout', payload);
+    return data;
+  } catch (error) {
+    throw error.response.data;
+  }
+}
+
 const AuthService = {
   loginUser,
+  signOutUser,
 };
 
 export default AuthService;

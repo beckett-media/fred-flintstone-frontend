@@ -1,0 +1,7 @@
+.signout-info {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    align-items: center;
+}

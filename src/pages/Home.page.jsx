@@ -14,17 +14,12 @@ const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log(open);
-  }, [open]);
-
-  useEffect(() => {
     const fetchOrderDetails = async () => {
       try {
         // dispatch(toggleIsFetching());
         const { data } = await getOrderById('63b3d86aece39837e06cb61c');
         dispatch(setCurrentOrder(data));
         setOpen(true);
-        console.log(data);
       } catch (e) {
         // toggleIsFetching();
         notification.open({
