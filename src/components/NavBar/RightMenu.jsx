@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { selectCurrentUser } from '../../store/auth/auth.selector';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../store/auth/auth.slice';
-import "./RightMenu.css"
+import './RightMenu.css';
 
 const RightMenu = () => {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const RightMenu = () => {
     <>
       {user?.name ? (
         <div className="signout-info">
-          <p>{user.name}</p>
+          <p style={{ color: 'white' }}>{user.name}</p>
           <Button onClick={() => dispatch(logout())}>Log Out</Button>
         </div>
       ) : (

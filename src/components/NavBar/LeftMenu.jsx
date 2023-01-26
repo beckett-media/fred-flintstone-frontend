@@ -40,9 +40,18 @@ const LeftMenu = ({ drawerOpened }) => {
   return (
     <Menu
       onClick={onClick}
+      className={"leftMenu"}
       selectedKeys={[current]}
       mode={drawerOpened ? 'inline' : 'horizontal'}
       items={items}
+      style={{
+        backgroundColor: "#161619",
+        color: "#fff",
+        "&:hover": {
+          backgroundColor: "red",
+          color: "#2bb8bd"
+        },
+      }}
     />
   );
 };

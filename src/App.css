@@ -1,5 +1,5 @@
 .main {
-  min-height: 50vh;
+  min-height: 70vh;
   padding: 40px 40px;
 }
 
@@ -8,6 +8,7 @@
 }
 
 .menuBar {
+  background-color: #161619;
   padding: 0 40px;
   height: 64px;
   border-bottom: solid 1px #e8e8e8;
@@ -25,7 +26,10 @@
 
 .logo a {
   display: inline-block;
-  font-size: 20px;
+  font-weight: 800;
+  font-size: 25;
+  color: #2bb8bd;
+  text-decoration: none;
   /* padding: 19px 20px; */
   text-transform: capitalize;
 }
@@ -53,6 +57,39 @@
 
 .menuCon .ant-menu-submenu-title {
   padding: 10px 20px;
+}
+
+.menuCon .ant-menu-light.ant-menu-horizontal > .ant-menu-item:hover {
+  color: #2bb8bd;
+}
+
+.menuCon .ant-menu-item-selected .ant-menu-title-content {
+  color: #2bb8bd;
+}
+
+.menuCon .ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected::after,
+:where(.css-dev-only-do-not-override-sk7ap8).ant-menu-light.ant-menu-horizontal
+  > .ant-menu-submenu-selected::after {
+  border-bottom-width: 2px;
+  border-bottom-color: #2bb8bd;
+}
+
+.menuCon .ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected,
+:where(.css-dev-only-do-not-override-sk7ap8).ant-menu-light.ant-menu-horizontal
+  > .ant-menu-submenu-selected {
+  border-bottom-width: 2px;
+  border-bottom-color: #2bb8bd;
+}
+
+.menuCon .ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected::after,
+:where(.css-dev-only-do-not-override-sk7ap8).ant-menu-light.ant-menu-horizontal
+  > .ant-menu-submenu-selected::after {
+  border-bottom-width: 2px;
+  border-bottom-color: #2bb8bd;
+}
+
+.menucon .ant-menu-title-content: {
+  color: #2bb8bd;
 }
 
 .menuCon .ant-menu-item a,
