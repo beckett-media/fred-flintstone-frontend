@@ -69,7 +69,13 @@ function LoginComponent() {
 
       <Form.Item>
         <Button
-          style={{ width: '100%', backgroundColor: '#2bb8bd', height: '50px' }}
+          style={{
+            width: '100%',
+            backgroundColor: '#2bb8bd',
+            height: '50px',
+            fontSize: '18px',
+            fontWeight: 700
+          }}
           loading={loading}
           type="primary"
           htmlType="submit"

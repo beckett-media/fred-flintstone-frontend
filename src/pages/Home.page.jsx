@@ -34,7 +34,7 @@ const Home = () => {
 
   return (
     <>
-      <h1>Scan Order</h1>
+      <h2>Scan Order</h2>
       {isFetching && <p>Loading...</p>}
       <OrderReceivedModal open={open} setOpen={setOpen} />
       <ProblemSubmissionModal open={open2} setOpen={setOpen2} />

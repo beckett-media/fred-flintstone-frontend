@@ -15,11 +15,30 @@ const RightMenu = () => {
     <>
       {user?.name ? (
         <div className="signout-info">
-          <p style={{ color: 'white' }}>{user.name}</p>
-          <Button onClick={() => dispatch(logout())}>Log Out</Button>
+          <p
+            style={{
+              color: 'white',
+              fontSize: '18px',
+              fontWeight: '600',
+              textTransform: 'capitalize',
+            }}
+          >
+            {user.name} -
+          </p>
+          <Button
+            style={{ height: '40px', fontSize: 16 }}
+            onClick={() => dispatch(logout())}
+          >
+            Log Out
+          </Button>
         </div>
       ) : (
-        <Button onClick={() => navigate('login')}>Login</Button>
+        <Button
+          style={{ height: '40px', fontSize: 16 }}
+          onClick={() => navigate('login')}
+        >
+          Login
+        </Button>
       )}
     </>
   );
