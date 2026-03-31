@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = `${process.env.REACT_APP_BASE_API_URL}/api/orders`;
+const API_URL = `${process.env.REACT_APP_BASE_API_URL}/v1/order`;
 
 export function createOrder(order) {
   return axios.post(API_URL, order);
@@ -10,8 +10,14 @@ export function getOrders() {
   return axios.get(API_URL);
 }
 
-export function getOrderById(orderId) {
-  return axios.get(API_URL + '/' + orderId);
+export async function getOrderById(orderId) {
+  try{
+    const {data} = await axios.get(API_URL + '/' + orderId);
+    return data;
+  }
+  catch(error){
+    throw error.response;
+  }
 }
 
 export function updateOrder(orderId, order) {
